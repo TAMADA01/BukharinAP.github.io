@@ -5,81 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Первая Работа</title>
 
-    <style>
-        body{
-            color: black;
-            text-align: center;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        header{
-            height: 50px;
-            
-
-        }
-
-        a{
-            text-decoration: none;
-        }
-
-        section{
-            width: 100%;
-            height: 300px;
-            padding: 10px;
-        }
-
-        .f_section{
-            background-color: rgb(226, 226, 226);
-            color: black;
-        }
-        .s_section{
-            background-color: rgb(41, 41, 41);
-            color: white;
-        }
-
-        h3{
-            font-size: 15px;
-        }
-
-        footer{
-            width: 100%;
-            height: 100px;
-            
-            color: white;
-            background-color: rgb(0, 0, 0);
-            text-align: center;
-            justify-content: center;
-        }
-    </style>
+    <link rel="stylesheet" href="mainStyle.css">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="aboutMe.html">О себе</a>
-            <a href="WhatICan.html">Что я умею</a>
-        </nav>
+        <div class="conteiner">
+            <div class="inner_header">
+                <div class="icon">
+                    <a href="index.html"><img src="Images/Slime.png" alt="Icon"></a>
+                
+                </div>
+                <nav>
+                    <a class="nav_link" href="aboutMe.html">О себе</a>
+                    <a class="nav_link" href="WhatICan.html">Что я умею</a>
+                </nav>
+            </div>
+        </div>
     </header>
     <main> 
         <section class="f_section">
-            <h1>Первая секция</h1>
-            <h3>Надеюсь я справлюсь</h3>
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1 class="title">Бухарин Алексей Павлович</h1>
+                </div>
+                <div class="section_main">
+                    <img class="my_photo" src="https://sun9-64.userapi.com/impg/3dr149Rd27M6ybJcFswv05V912x6vQNts1i7gA/k1dVXgOC5Kg.jpg?size=1440x2160&quality=96&sign=c6eab22a401ca74c477c3e0ea03c0e5a&type=album" alt="Алексей Павлович">
+                </div>
+            </div>
         </section>
         <section class="s_section">
-            <h1>Вторая секция</h1>
-            <h3>Надеюсь я справлюсь</h3>
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1>О себе</h1>
+                </div>
+                <div class="section_main">
+                    <p>Я Бухарин Алексей Павлович. Учусь в Дубне и изучаю веб-технологии</p>
+                </div>
+            </div>
         </section>
         <section class="f_section">
-            <h1>Третья секция</h1>
-            <h3>Надеюсь я справлюсь</h3>
-        </section>
-        <section class="s_section">
-            <h1>Четвертая секция</h1>
-            <h3>Надеюсь я справлюсь</h3>
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1>Как со мной связаться</h1>
+                </div>
+                <div class="section_main">
+                    <div class="items">
+                        <div class="contact_item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/VK_Compact_Logo.svg/2048px-VK_Compact_Logo.svg.png" alt="ВК">
+                        </div>
+                        <div class="contact_item">
+                            <img src="https://free-png.ru/wp-content/uploads/2021/01/telegram_PNG20-49ab35b8.png" alt="ТГ">
+                        </div>
+                        <div class="contact_item">
+                            <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="ИНСТА">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        Alex
+        <div></div>
+        <p>Developed by Alex in 2023</p>
     </footer>
 </body>
 </html>

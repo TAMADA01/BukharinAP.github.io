@@ -5,61 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Первая Работа</title>
 
-    <style>
-        body{
-            text-align: center;
-        }
-        ul{
-            list-style: none;
-            
-        }
-        li{
-            list-style: none;
-        }
-        a{
-            text-decoration: none;
-        }
-        section{
-            width: 100%;
-            height: 300px;
-            background-color: antiquewhite;
-        }
-
-        h3{
-            font-size: 15px;
-        }
-
-        img{
-            flex: auto;
-        }
-
-        footer{
-            width: 100%;
-            height: 100%;
-            background-color: rgb(137, 137, 137);
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="mainStyle.css">
 </head>
 <body>
     <header>
-        <ul>
-            <li><a href="aboutMe.html">О себе</a></li>
-            <li><a href="WhatICan.html">Что я умею</a></li>
-        </ul>
+        <div class="conteiner">
+            <div class="inner_header">
+                <div class="icon">
+                    <a href="index.html"><img src="Images/Slime.png" alt="Icon"></a>
+                
+                </div>
+                <nav>
+                    <a class="nav_link" href="aboutMe.html">О себе</a>
+                    <a class="nav_link" href="WhatICan.html">Что я умею</a>
+                </nav>
+            </div>
+        </div>
     </header>
     <main> 
-        <section>
-            <h1>Бухарин Алексей Павлович</h1>
-            <h3>Самый лучший, самый классссссный!!!!</h3>
-            <div>
-                <img src="https://sun9-64.userapi.com/impg/3dr149Rd27M6ybJcFswv05V912x6vQNts1i7gA/k1dVXgOC5Kg.jpg?size=720x1080&quality=96&sign=0edcccc281673baf59f9a1112482ded0&type=album" alt="Картинки нет(">
-            
+        <section class="f_section">
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1 class="title">Бухарин Алексей Павлович</h1>
+                </div>
+                <div class="section_main">
+                    <img class="my_photo" src="https://sun9-64.userapi.com/impg/3dr149Rd27M6ybJcFswv05V912x6vQNts1i7gA/k1dVXgOC5Kg.jpg?size=1440x2160&quality=96&sign=c6eab22a401ca74c477c3e0ea03c0e5a&type=album" alt="Алексей Павлович">
+                    <div class="discription">
+                        <p>Я Бухарин Алексей Павлович. Учусь в Дубне и изучаю веб-технологии</p>
+                    </div>
+                    <div class="items">
+                        <div class="contact_item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/VK_Compact_Logo.svg/2048px-VK_Compact_Logo.svg.png" alt="ВК">
+                        </div>
+                        <div class="contact_item">
+                            <img src="https://free-png.ru/wp-content/uploads/2021/01/telegram_PNG20-49ab35b8.png" alt="ТГ">
+                        </div>
+                        <div class="contact_item">
+                            <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="ИНСТА">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        Alex
+        <div></div>
+        <p>Developed by Alex in 2023</p>
     </footer>
 </body>
 </html>
