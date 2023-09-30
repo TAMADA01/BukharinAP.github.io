@@ -11,9 +11,13 @@ body{
     padding: 0px;
     margin: 0px;
 }
+
 main{
     min-height: calc(100vh - 60px - 60px);
+    display: flex;
+    flex-direction: column;
 }
+
 header{
     width: 100%;
     height: 60px;
@@ -21,49 +25,68 @@ header{
     background-color: rgb(24, 158, 221);
 }
 
+a{
+    text-decoration: none;
+}
+
 .conteiner{
     max-width: 80%;
+    height: 100%;
     margin: 0 auto;
 }
 
 .inner_header{
+    height: 100%;
     display: flex;
     
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0px;
+    
 }
 
 .icon{
-    height: 50px;
-    width: auto;
+    height: 40px;
+    width: 40px;
 
     display: inline-block;
+
+    transition: .1s linear;
+}
+
+.icon:hover{
+    transform: scale(1.2);
 }
 
 .icon a{
-    width: 100%;
     height: 100%;
-    text-decoration: none;
+    display: inline-block;
 }
 
 .icon img{
     height: 100%;
-    width: auto;
+    
 }
 
-nav{
-    font-size: 25px;
+.icon img:hover{
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
 }
 
 .nav_link{
     display: inline-block;
     vertical-align: top;
-    margin: 0 20px;
+    margin: 0 22px;
+    font-size: 22px;
     position: relative;
 
     color: #fff;
     text-decoration: none;
+
+    transition: .1s linear;
+}
+
+.nav_link:hover{
+    text-shadow: 0px 0px 15px black;
+    transform: scale(1.2);
 }
 
 .title{
@@ -74,29 +97,30 @@ h1{
     font-size: 40px;
 }
 
-section{
-    width: 100%;
-    padding: 10px;
-}
-
 .f_section{
     background-color: rgb(255, 255, 255);
-    color: rgb(0, 174, 237);
+    color: rgb(24, 158, 221);
+    box-shadow: 0px 10px 20px -5px rgb(49, 49, 49, 0.5) inset;
 }
 
 .s_section{
     background-color: rgb(24, 158, 221);
     color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px 5px rgb(49, 49, 49, 0.5);
+}
+
+.last_section{
+    flex: 1;
 }
 
 .section_title{
     text-align: center;
-    margin: 20px auto;
+    margin: 25px auto;
 }
 
 .section_main{
     text-align: center;
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
 @keyframes ROTATION{
@@ -110,21 +134,35 @@ section{
 
 @keyframes SIZE{
     0%{ 
-        transform: scale(1);
+        transform: scale(0.7);
     }
     100%{ 
-        transform: scale(0.8);
+        transform: scale(1);
     }
+}
+
+.photo_turn{
+    margin: 80px auto;
+    animation: ROTATION 4s infinite cubic-bezier(.68,-0.55,.27,1.55);
 }
 
 .photo_handler{
-    animation: ROTATION 4s infinite linear;
+    height: 600px;
+    width: 600px;
+    overflow: hidden;
+    margin: 0px auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px black;
+    
+    animation: SIZE 2s alternate-reverse infinite ease;
 }
 
 .my_photo{
-    height: 620px;
-    animation: SIZE 0.5s alternate-reverse infinite cubic-bezier(.68,-0.55,.27,1.55);
-    margin-bottom: 100px;
+    position: relative;
+    right: 95px;
+    bottom: 220px;
+    width: 120%;
+    height: auto;
 }
 
 .items{
@@ -134,20 +172,42 @@ section{
 }
 
 .contact_item{
-    width: 10%;
-    height: auto;
-    display: inline-block;
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    align-items: center;
     margin: 0 auto;
+
+    transition: .1s linear;
+}
+
+.contact_item:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
 }
 
 .contact_item img{
     width: 100%;
-    height: auto;
+}
+
+.f_section .card{
+    width: 100%;
+    height: 100%;
+    padding: 2vw 0;
+    border: 3px solid rgb(24, 158, 221);
+    border-radius: 50%;
+    background-color: white;
+    font-size: 10px;
+    text-align: center;
+}
+
+.card p{
+    margin-top: 5px;
 }
 
 .discription{
-    margin: 50px 0px;
-    padding: 20px 0px;
+    margin: 70px 0px;
+    padding: 30px 40px;
     background-color: rgb(24, 158, 221);
     border-radius: 200px;
     color: white;
@@ -165,24 +225,77 @@ footer{
     align-items: center;
     justify-content: center;
     padding-bottom: 30px;
+    box-shadow: 0px 5px 10px -5px black inset;
 }
 
 footer p{
     margin-top: 30px;
 }
 
-table{
+caption{
+    font-size: 20px;
+    font-weight: 900;;
+    border-radius: 200px;
+    padding: 15px;
+    margin: 30px;
+}
+
+.f_section table{
     margin: 0 auto;
     border-collapse: collapse;
+    border: 3px solid;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
 }
 
-td, th{
-    padding: 9px;
-    border: 2px dotted white;
+.f_section table th{
+    padding: 10px;
+    border: 3px dotted white;
+    color: white;
+    background-color: rgb(24, 158, 221);
 }
 
-caption{
-    margin: 10px;
+.f_section table td{
+    padding: 10px;
+    border: 3px dotted rgb(24, 158, 221);
+    transition: .3s linear;
+}
+.f_section table td:hover{
+    background-color: rgb(24, 158, 221);
+    color: white;
+}
+
+.f_section table caption{
+    color: white;
+    background-color: rgb(24, 158, 221);
+}
+
+.s_section table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 3px solid;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.s_section table th{
+    padding: 10px;
+    border: 3px dotted rgb(24, 158, 221);
+    color: rgb(24, 158, 221);
+    background-color: white;
+}
+
+.s_section table td{
+    padding: 10px;
+    border: 3px dotted white;
+    transition: .3s linear;
+}
+.s_section table td:hover{
+    background-color: white;
+    color: rgb(24, 158, 221);
+}
+
+.s_section table caption{
+    color: rgb(24, 158, 221);
+    background-color: white;
 }
 
 .contact{
