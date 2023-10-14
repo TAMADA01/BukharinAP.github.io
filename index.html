@@ -74,10 +74,11 @@
                     <h1>Введите свои данные</h1>
                 </div>
                 <div class="section_main">
-                    <form action="" method="POST">
-                        <p>Введите имя: <input type="text" name="firstname" /></p>
-                        <p>Введите фамилию: <input type="text" name="lastname" /></p>
-                        <input type="submit" value="Отправить">
+                    <div name="greeting" class="greeting"></div>
+                    <form action="contact.html">
+                        <p>Введите имя: <input type="text" name="name"></p>
+                        <p>Введите фамилию: <input type="text" name="surname"></p>
+                        <input name="button" type="submit" value="Отправить">
                     </form>
                 </div>
             </div>
@@ -87,4 +88,5 @@
         <p>Developed by Alex in 2023</p>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>
