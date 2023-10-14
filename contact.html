@@ -76,7 +76,7 @@
                 </div>
             </div>
         </section>
-        <section class="f_section last_section">
+        <section class="f_section">
             <div class="conteiner">
                 <div class="section_title">
                     <h1>Красота</h1>
@@ -87,10 +87,26 @@
                 </div>
             </div>
         </section>
+        <section class="s_section last_section">
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1>Список задач</h1>
+                </div>
+                <div class="section_main">
+                    <form id="task" action="">
+                        <input type="text" id="inputText" placeholder="Задача...">
+                        <span onclick="newElement()" class="addButton">Добавить</span>
+                        <ul class="list">
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>Developed by Alex in 2023</p>
     </footer>
 </body>
 <script src="grid.js"></script>
+<script src="task.js"></script>
 </html>

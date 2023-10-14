@@ -1,5 +1,5 @@
 let gridHandler = document.getElementById("grid");
-const colCount = 5;
+const colCount = 4;
 const boxCount = Math.pow(colCount, 2);
 selectedItem = null;
 
