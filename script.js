@@ -1,24 +1,101 @@
-let form = document.forms[0];
+const form = document.getElementById('avtor');
 
-form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        let mainSection = form.parentElement;
-        greetingDiv = mainSection.children.greeting;
-        greetingDiv.innerHTML = 
-        `<h2>Привет 
-        ${form.elements.name.value} 
-        ${form.elements.surname.value}</h2>`;
+let checkboxDiv = document.getElementById('block_checkbox');
+checkboxDiv.classList.add('hidden_block');
 
-        // addElement(form.elements.name.value,
-        //     form.elements.surname.value,
-        //     form);
-    })
-    
-function addElement(name, surname, node) {
-    var newElem = document.createElement("div");
-    newElem.innerHTML = `<h2>Привет ${name} ${surname}</h2>`;
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    let textName = document.getElementById('textName');
+    let textArea = document.getElementById('textarea');
+    if (textName.value === '') {
+        alert("Заполните поле имя");
+        return;
+    }
+    if (textArea.value === '') {
+        alert("Введите сообщение");
+        return;
+    }
+});
 
-    node.before(newElem);
+let radios = document.getElementById('radios').children;
+for (let i = 0; i < radios.length; i++) {
+    const element = radios[i].children[0];
+    switch (element.value) {
+        case 'simple':
+            element.addEventListener('change', hiddenSimple);
+            break;
+        case 'e-mail':
+            element.addEventListener('change', hiddenEmail);
+            break;
+        case 'tel':
+            element.addEventListener('change', hiddenTel);
+            break;
+        case 'data':
+            element.addEventListener('change', hiddenData);
+            break;
+        case 'url':
+            element.addEventListener('change', hiddenURL);
+            break;
+        default:
+            break;
+    }
 }
 
-console.log("WORK!!!!!");
+function hiddenSimple(){
+    let inputs = document.getElementById('block_info').children[1].children;
+    inputs[1].classList.add('hidden_block');
+    inputs[2].classList.add('hidden_block');
+    inputs[3].classList.add('hidden_block');
+    inputs[4].classList.add('hidden_block');
+}
+
+function hiddenEmail(){
+    let inputs = document.getElementById('block_info').children[1].children;
+    inputs[1].classList.remove('hidden_block');
+    inputs[2].classList.add('hidden_block');
+    inputs[3].classList.add('hidden_block');
+    inputs[4].classList.add('hidden_block');
+}
+
+function hiddenTel(){
+    let inputs = document.getElementById('block_info').children[1].children;
+    inputs[1].classList.add('hidden_block');
+    inputs[2].classList.remove('hidden_block');
+    inputs[3].classList.add('hidden_block');
+    inputs[4].classList.add('hidden_block');
+}
+
+function hiddenData(){
+    let inputs = document.getElementById('block_info').children[1].children;
+    inputs[1].classList.remove('hidden_block');
+    inputs[2].classList.remove('hidden_block');
+    inputs[3].classList.remove('hidden_block');
+    inputs[4].classList.add('hidden_block');
+}
+
+function hiddenURL(){
+    let inputs = document.getElementById('block_info').children[1].children;
+    inputs[1].classList.add('hidden_block');
+    inputs[2].classList.add('hidden_block');
+    inputs[3].classList.add('hidden_block');
+    inputs[4].classList.remove('hidden_block');
+}
+
+let select = document.getElementById('select');
+select.addEventListener('change', function(){
+    switch (this.value) {
+        case 'without':
+            checkboxDiv.classList.add('hidden_block');
+            break;
+        case 'learning':
+            checkboxDiv.classList.remove('hidden_block');
+            break;
+        default:
+            break;
+    }
+});
+
+select.selectedIndex = 0;
+radios[0].children[0].checked = true;
+hiddenSimple();
+

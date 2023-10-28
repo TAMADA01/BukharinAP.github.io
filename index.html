@@ -74,10 +74,47 @@
                     <h1>Введите свои данные</h1>
                 </div>
                 <div class="section_main">
-                    <div name="greeting" class="greeting"></div>
-                    <form action="contact.html">
-                        <p>Введите имя: <input type="text" name="name"></p>
-                        <p>Введите фамилию: <input type="text" name="surname"></p>
+                    <form id="avtor">
+                        <div id="block_info">
+                            <h3>Информация</h3>
+                            <div id="info_inputs">
+                                <p class="text_name">Введите имя: <input type="text" id="textName"></p>
+                                <p class="text_email">Введите e-mail: <input type="email"></p>
+                                <p class="text_tel">Введите телефон: <input type="tel"></p>
+                                <p class="text_data">Введите дату: <input type="date"></p>
+                                <p class="text_url">Введите URL: <input type="url"></p>
+                            </div>
+                        </div>
+                        <div id="block_radio">
+                            <h3>Добавить способ ответа</h3>
+                            <div id="radios">
+                                <p><input type="radio" value="simple" name="1">Сообщение</p>
+                                <p><input type="radio" value="e-mail" name="1">e-mail</p>
+                                <p><input type="radio" value="tel" name="1">Телефон</p>
+                                <p><input type="radio" value="data" name="1">Назначить встречу</p>
+                                <p><input type="radio" value="url" name="1">URL</p>
+                            </div>
+                        </div>
+                        <div id="block_select">
+                            <h3>Укажите тему</h3>
+                            <select name="" id="select">
+                                <option selected="selected" value="without">Без темы</option>
+                                <option value="learning">Учёба</option>
+                            </select>
+                        </div>
+                        <div id="block_checkbox">
+                            <h3>Что по учёбе</h3>
+                            <div>
+                                <p><input type="checkbox"> Учеба</p>
+                                <p><input type="checkbox"> Учеба</p>
+                                <p><input type="checkbox"> Учеба</p>
+                                <p><input type="checkbox"> Учеба</p>
+                            </div>
+                        </div>
+                        <div id="block_textarea">
+                            <h3>Ваше сообщение</h3>
+                            <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+                        </div>
                         <input name="button" type="submit" value="Отправить">
                     </form>
                 </div>
