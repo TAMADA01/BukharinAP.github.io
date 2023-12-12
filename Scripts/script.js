@@ -11,6 +11,7 @@ form.addEventListener('submit', function(e){
     isValid = isNameValid() & isMessageValid() & isEmailValid() & isDataValid() & isTelValid() & isURLValid();
     if (isValid){
         e.currentTarget.submit();
+        alert("Отправка");
     }
 });
 
@@ -64,8 +65,8 @@ function hiddenTel(){
 
 function hiddenData(){
     let inputs = document.getElementById('block_info').children[1].children;
-    inputs[1].classList.remove('hidden_block');
-    inputs[2].classList.remove('hidden_block');
+    inputs[1].classList.add('hidden_block');
+    inputs[2].classList.add('hidden_block');
     inputs[3].classList.remove('hidden_block');
     inputs[4].classList.add('hidden_block');
 }
@@ -101,6 +102,7 @@ function isNameValid(){
 
     if (name.value.length === 0) {
         name.classList.add('error_block');
+        alert('Поле Имя неверное');
         return false;
     }
     name.classList.remove('error_block');
@@ -112,6 +114,7 @@ function isMessageValid(){
 
     if (message.value.length === 0) {
         message.classList.add('error_block');
+        alert('Поле Сообщение пустое');
         return false;
     }
     message.classList.remove('error_block');
@@ -127,6 +130,7 @@ function isTelValid(){
             && ((phone.value.length === 0) 
             || !reg.test(phone.value))) {
         phone.classList.add('error_block');
+        alert('Поле телефон неверное');
         return false;
     }
     phone.classList.remove('error_block');
@@ -142,6 +146,7 @@ function isEmailValid(){
             && ((email.value.length === 0) 
             || !reg.test(email.value))) {
         email.classList.add('error_block');
+        alert('Поле e-mail неверное');
         return false;
     }
     email.classList.remove('error_block');
@@ -152,6 +157,7 @@ function isDataValid(){
 
     if (!data.parentElement.classList.contains('hidden_block') && ((data.value.length === 0))) {
         data.classList.add('error_block');
+        alert('Поле Дата неверное');
         return false;
     }
     data.classList.remove('error_block');
@@ -162,6 +168,7 @@ function isURLValid(){
 
     if (!url.parentElement.classList.contains('hidden_block') && ((url.value.length === 0))) {
         url.classList.add('error_block');
+        alert('Поле URL неверное');
         return false;
     }
     url.classList.remove('error_block');

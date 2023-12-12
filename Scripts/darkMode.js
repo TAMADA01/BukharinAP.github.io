@@ -7,6 +7,13 @@ document.body.style.setProperty("--bs-main-color", bs_main);
 document.body.style.setProperty("--second-color", second);
 
 const button = document.getElementById("switch_mode");
+if (main !== 'rgb(24, 221, 155)') {
+    button.innerText = '✹';
+}
+else{
+    button.innerText = '☾';
+}
+
 isClick = main === 'rgb(24, 221, 155)';
 button.addEventListener('click', function(){
     main = 'rgb(24, 158, 221)';
@@ -14,7 +21,9 @@ button.addEventListener('click', function(){
     second = 'rgb(255, 255, 255)';
 
     isClick = !isClick;
+    button.innerText = '✹';
     if (isClick) {
+        button.innerText = '☾';
         main ='rgb(24, 221, 155)';
         bs_main = 'rgba(24, 221, 155, 0.7)'
         second = 'rgb(57, 57, 57)';

@@ -626,3 +626,21 @@ label > input{
     background-color: var(--bs-main-color) !important;
     border: 3px solid var(--main-color);
 }
+
+.two_colums{
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+#switch_mode{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    font-size: 23px;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    border: none;
+    border-radius: 50vw;
+}
