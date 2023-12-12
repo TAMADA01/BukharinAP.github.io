@@ -7,13 +7,10 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     let textName = document.getElementById('textName');
     let textArea = document.getElementById('textarea');
-    if (textName.value === '') {
-        alert("Заполните поле имя");
-        return;
-    }
-    if (textArea.value === '') {
-        alert("Введите сообщение");
-        return;
+    let isValid = true;
+    isValid = isNameValid() & isMessageValid() & isEmailValid() & isDataValid() & isTelValid() & isURLValid();
+    if (isValid){
+        e.currentTarget.submit();
     }
 });
 
@@ -98,4 +95,76 @@ select.addEventListener('change', function(){
 select.selectedIndex = 0;
 radios[0].children[0].checked = true;
 hiddenSimple();
+
+function isNameValid(){
+    const name = document.getElementById("textName");
+
+    if (name.value.length === 0) {
+        name.classList.add('error_block');
+        return false;
+    }
+    name.classList.remove('error_block');
+    return true;
+}
+
+function isMessageValid(){
+    const message = document.getElementById("textarea");
+
+    if (message.value.length === 0) {
+        message.classList.add('error_block');
+        return false;
+    }
+    message.classList.remove('error_block');
+    return true;
+}
+
+function isTelValid(){
+    let reg = /^8\d{10}/;
+
+    const phone = document.getElementById("tel");
+
+    if (!phone.parentElement.classList.contains('hidden_block') 
+            && ((phone.value.length === 0) 
+            || !reg.test(phone.value))) {
+        phone.classList.add('error_block');
+        return false;
+    }
+    phone.classList.remove('error_block');
+    return true;
+}
+
+function isEmailValid(){
+    let reg = /[A-Za-z0-9]+@[a-z]+\.[a-z]/;
+
+    const email = document.getElementById("email");
+
+    if (!email.parentElement.classList.contains('hidden_block') 
+            && ((email.value.length === 0) 
+            || !reg.test(email.value))) {
+        email.classList.add('error_block');
+        return false;
+    }
+    email.classList.remove('error_block');
+    return true;
+}
+function isDataValid(){
+    const data = document.getElementById("data");
+
+    if (!data.parentElement.classList.contains('hidden_block') && ((data.value.length === 0))) {
+        data.classList.add('error_block');
+        return false;
+    }
+    data.classList.remove('error_block');
+    return true;
+}
+function isURLValid(){
+    const url = document.getElementById("url");
+
+    if (!url.parentElement.classList.contains('hidden_block') && ((url.value.length === 0))) {
+        url.classList.add('error_block');
+        return false;
+    }
+    url.classList.remove('error_block');
+    return true;
+}
 

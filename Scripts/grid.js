@@ -71,15 +71,15 @@ function Select() {
             }
 
         }
-        selectedItem.style.backgroundColor = 'rgb(24, 158, 221)';
-        selectedItem.style.border = 'none';
+        selectedItem.classList.add("grid_elem");
+        selectedItem.classList.remove("grid_selected_elem");
         selectedItem = null;
     }
     else{
         selectedItem = this;
 
-        selectedItem.style.backgroundColor = 'rgb(24, 158, 221, 0.3)';
-        selectedItem.style.border = '3px solid rgb(24, 158, 221)';
+        selectedItem.classList.add("grid_selected_elem");
+        selectedItem.classList.remove("grid_elem");
     }
 }
 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первая Работа</title>
+
+    <link rel="stylesheet" href="/mainStyle.css">
+
+    <script defer src="/Scripts/darkMode.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="conteiner">
+            <div class="inner_header">
+                <div class="icon">
+                    <button id="switch_mode">Смена темы</button>
+                    <a href="/index.html"><img src="/Images/Slime.png" alt="Icon"></a>
+                </div>
+                <nav>
+                    <a class="nav_link" href="/index.html">О себе</a>
+                    <a class="nav_link" href="/index.html#what_i_can">Мои умения</a>
+                    <a class="nav_link" href="/Pages/resume.html">Резюме</a>
+                    <a class="nav_link" href="/Pages/gallery.html">Мои интересы</a>
+                    <a class="nav_link" href="/Pages/contact.html">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main> 
+        <section class="f_section">
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1 class="title">Как со мной связаться?</h1>
+                </div>
+                <div class="section_main">
+                    <div class="items">
+                        <a class="contact_item" href="https://vk.com/alexfitnesss">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/VK_Compact_Logo.svg/2048px-VK_Compact_Logo.svg.png" alt="ВК">
+                        </a>
+                        <a class="contact_item" href="https://t.me/TAMAD0R">
+                            <img src="https://free-png.ru/wp-content/uploads/2021/01/telegram_PNG20-49ab35b8.png" alt="ТГ">
+                        </a>
+                        <a class="contact_item" href="">
+                            <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="ИНСТА">
+                        </a>
+                        <div class="contact_item" href="">
+                            <div class="card">
+                                <h3>Телефон</h3>
+                                <p>8-999-999-99-99</p>
+                            </div>
+                        </div>
+                        <div class="contact_item" href="">
+                            <div class="card">
+                                <h3>Почта</h3>
+                                <p>bap.22@uni-dubna.ru</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s_section ">
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1>Оставить отзыв</h1>
+                </div>
+                <div class="section_main">
+                    <form class="contact" method="get">
+                        <select name="" id="">
+                            <option selected disabled value="">Выберите пол</option>
+                            <option value="">Муской</option>
+                            <option value="">Женский</option>
+                        </select>
+                        <input class="name" required placeholder="Ваше имя" type="text" value="">
+                        <textarea placeholder="Отзыв"></textarea>
+                        <label><input type="checkbox">Подписаться на обновления</label>
+                        <button class="send">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="f_section last_section">
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1>Введите свои данные</h1>
+                </div>
+                <div class="section_main">
+                    <form id="avtor">
+                        <div id="block_info">
+                            <h3>Информация</h3>
+                            <div id="info_inputs">
+                                <p class="text_name">Введите имя: <input type="text" id="textName"></p>
+                                <p class="text_email">Введите e-mail: <input type="email" id="email"></p>
+                                <p class="text_tel">Введите телефон: <input type="tel" id="tel"></p>
+                                <p class="text_data">Введите дату: <input type="date" id="data"></p>
+                                <p class="text_url">Введите URL: <input type="url" id="url"></p>
+                            </div>
+                        </div>
+                        <div id="block_radio">
+                            <h3>Добавить способ ответа</h3>
+                            <div id="radios">
+                                <label><input type="radio" value="simple" name="1">Сообщение</label>
+                                <label><input type="radio" value="e-mail" name="1">e-mail</label>
+                                <label><input type="radio" value="tel" name="1">Телефон</label>
+                                <label><input type="radio" value="data" name="1">Назначить встречу</label>
+                                <label><input type="radio" value="url" name="1">URL</label>
+                            </div>
+                        </div>
+                        <div id="block_select">
+                            <h3>Укажите тему</h3>
+                            <select name="" id="select">
+                                <option selected="selected" value="without">Без темы</option>
+                                <option value="learning">Учёба</option>
+                            </select>
+                        </div>
+                        <div id="block_checkbox">
+                            <h3>Что по учёбе</h3>
+                            <div>
+                                <p><input type="checkbox"> Учеба</p>
+                                <p><input type="checkbox"> Учеба</p>
+                                <p><input type="checkbox"> Учеба</p>
+                                <p><input type="checkbox"> Учеба</p>
+                            </div>
+                        </div>
+                        <div id="block_textarea">
+                            <h3>Ваше сообщение</h3>
+                            <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+                        </div>
+                        <input name="button" type="submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Developed by Alex in 2023</p>
+    </footer>
+</body>
+</html>

@@ -1,9 +1,9 @@
 const form = document.getElementById('task');
-let index = Number(localStorage.key(0));
 
 for (let i = 0; i < localStorage.length; i++) {
-    const element = localStorage.getItem(localStorage.key(localStorage.length-1-i));
-    createElement(element)
+    const key = localStorage.key(localStorage.length-1-i)
+    const element = localStorage.getItem(key);
+    createElement(key, element)
 }
 
 function newElement(){
@@ -12,12 +12,12 @@ function newElement(){
         alert("Введите значение");
         return;
     }
-    createElement(text);
-    localStorage.setItem(index, text);
-    index++;
+    const time = Date.now();
+    createElement(time, text);
+    localStorage.setItem(time, text);
 }
 
-function createElement(text) {
+function createElement(index, text) {
     let task = document.createElement("li");
     task.id = `${index}`
     task.innerText = text;

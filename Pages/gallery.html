@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первая Работа</title>
+
+    <link rel="stylesheet" href="/mainStyle.css">
+
+    <script defer src="/Scripts/darkMode.js"></script>
+    <script defer src="/Scripts/gallery.js"></script>
+    <script defer src="/Scripts/timer.js"></script>
+    <script defer src="/Scripts/grid.js"></script>
+    <script defer src="/Scripts/task.js"></script>
+</head>
+<body>
+    <header>
+        <div class="conteiner">
+            <div class="inner_header">
+                <div class="icon">
+                    <button id="switch_mode">Смена темы</button>
+                    <a href="/index.html"><img src="/Images/Slime.png" alt="Icon"></a>
+                </div>
+                <nav>
+                    <a class="nav_link" href="/index.html">О себе</a>
+                    <a class="nav_link" href="/index.html#what_i_can">Мои умения</a>
+                    <a class="nav_link" href="/Pages/resume.html">Резюме</a>
+                    <a class="nav_link" href="/Pages/gallery.html">Мои интересы</a>
+                    <a class="nav_link" href="/Pages/contact.html">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main> 
+        <section class="f_section">
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1>Красота</h1>
+                </div>
+                <div class="section_main">
+                    <div class="grid" id="grid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s_section">
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1 class="title">Галерея</h1>
+                </div>
+                <div class="section_main">
+                    <div class="container-gallery">
+                        <div class="slaider">
+                            <div class="slaider-line">
+                                <div class="image-container">
+                                    <img src="/Images/1.jpg" alt="" class="mini">
+                                </div>
+                                <div class="image-container">
+                                    <img src="/Images/2.jpg" alt="" class="mini">
+                                </div>
+                                <div class="image-container">
+                                    <img src="/Images/3.jpg" alt="" class="mini">
+                                </div>
+                                <div class="image-container">
+                                    <img src="/Images/4.jpg" alt="" class="mini">
+                                </div>
+                                <div class="image-container">
+                                    <img src="/Images/5.jpg" alt="" class="mini">
+                                </div>
+                                <div class="image-container">
+                                    <img src="/Images/6.jpeg" alt="" class="mini">
+                                </div>
+                                <div class="image-container">
+                                    <img src="/Images/7.jpeg" alt="" class="mini">
+                                </div>
+                                <div class="image-container">
+                                    <img src="/Images/8.jpeg" alt="" class="mini">
+                                </div>
+                                <div class="image-container">
+                                    <img src="/Images/9.jpeg" alt="" class="mini">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a class="slaider-prev">
+                                PREV    
+                            </a>
+                            <a class="slaider-next">
+                                NEXT
+                            </a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <section class="f_section">
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1>Список задач</h1>
+                </div>
+                <div class="section_main">
+                    <form id="task" action="">
+                        <div class="list_header">
+                            <input type="text" id="inputText" placeholder="Задача...">
+                            <span onclick="newElement()" class="addButton">Добавить</span>
+                        </div>
+                        <ul class="list">
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="s_section last_section">
+            <div class="conteiner">
+                <div class="section_title">
+                    <h1>Таймер</h1>
+                </div>
+                <div class="section_main">
+                    <div class="timer">
+                        <div class="time_buttons"></div>
+                        <div class="time">
+                            <b class="time_display_min">00</b>
+                            <p class="time_display_sep">:</p>
+                            <b class="time_display_sec">00</b>
+                        </div>
+                        <div class="time_action_buttons">
+                            <button class="time_action_button">Старт</button>
+                            <button class="time_action_button">Стоп</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Developed by Alex in 2023</p>
+    </footer>
+</body>
+</html>
